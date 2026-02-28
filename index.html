@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokoro - Relationship Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Themes from user code */
+        :root, .theme-earthy {
+            --bg: #F3EEE7; --card: #FFFFFF; --primary: #C89A5B; --soft: #D4C2AD; --accent: #B4D2BF; --ink: #2F2823;
+            --success: #4E7C5A; --inprogress: #D2A865; --awaiting: #BA9AA8;
+        }
+        .theme-pastel {
+            --bg: #FFF7FB; --card: #FFFFFF; --primary: #F5B8D1; --soft: #F9DDE7; --accent: #E3D8FF; --ink: #5B4B5F;
+            --success: #8FD3B4; --inprogress: #F9C98B; --awaiting: #F2A4C8;
+        }
+        .theme-dark {
+            --bg: #050608; --card: #14161C; --primary: #E0B46A; --soft: #383B46; --accent: #222533; --ink: #F7F7FA;
+            --success: #71D0A2; --inprogress: #E3BD76; --awaiting: #C796B8;
+        }
+        .theme-bay {
+            --bg: #F2F7F9; --card: #FFFFFF; --primary: #0077B6; --soft: #BEE9E8; --accent: #FFD166; --ink: #1B263B;
+            --success: #2D6A4F; --inprogress: #FB8500; --awaiting: #8E9AAF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--ink);
+            transition: all 0.3s ease;
+        }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .kokoro-card {
+            background: var(--card);
+            border: 1px solid var(--soft);
+            box-shadow: 0 4px 12px -2px rgba(0,0,0,0.05);
+        }
+        .status-chip {
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .status-PLANNED { background: color-mix(in srgb, var(--awaiting) 20%, white); color: var(--awaiting); }
+        .status-ORDERED { background: color-mix(in srgb, var(--inprogress) 20%, white); color: var(--inprogress); }
+        .status-SENT { background: color-mix(in srgb, var(--success) 20%, white); color: var(--success); }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: var(--soft); border-radius: 10px; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

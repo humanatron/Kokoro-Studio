@@ -1,0 +1,7 @@
+{
+  "name": "Kokoro",
+  "description": "A quiet, private relationship companion designed to help you nurture the bonds that matter most through intentional journaling, preference tracking, and thoughtful reminders.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
